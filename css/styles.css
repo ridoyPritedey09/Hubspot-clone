@@ -1,0 +1,16 @@
+/* reset styles */
+
+@import url(reset_styles.css);
+
+/* import from wide_screen_nav.css 
+                                */
+
+@import url(wide_screen_nav.css);
+
+/* colors 
+               */
+
+:root {
+    --orange: rgb(255, 122, 89);
+    --ocean-blue: rgb(0, 164, 189);
+}

@@ -1,0 +1,136 @@
+@import url(reset_styles.css);
+/* avenir next font family */
+
+@font-face {
+    font-family: 'Avenir next';
+    src: url(../fonts/Avenir-Next/Avenir\ Next\ Font.ttf);
+}
+
+/* scroll nav main wrapper for  */
+
+body {
+    font-family: 'Avenir next', 'Open Sans', sans-serif;
+}
+
+
+/* common navigation class styles */
+
+.nav-wrapper {
+    background-color: aliceblue;
+    position: relative;
+    z-index: 95;
+}
+
+.upper-scroll-nav {
+    background-color: #fff;
+    width: 100%;
+    font-size: .75rem;
+    line-height: 4.42;
+}
+
+.page-width-normal {
+    max-width: 1080px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-inner .nav-group {
+    display: inline;
+}
+
+.nav-group-item {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: 500;
+}
+
+.nav-link-wrapper{
+    display: block;
+    padding: 0.5
+}
+
+.nav-link{
+    color: rgb(12, 45, 51);
+}
+
+.nav-link-label{
+
+}
+
+.link-label-icon{
+    width: 1.2rem;
+    height: 3.4rem;
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+svg.dropdown-icon{
+    width: 9px;
+    height: 7px;
+}
+
+
+
+ /* have these upper class but need another design to configure */
+ span.nav-link-label.link-label-global {
+    margin-right: .62rem;
+}
+
+
+#human-svg.link-label-icon{
+    width: 1rem;
+}
+
+.search-item{
+    line-height: 2.5;
+    border-radius: 5px;
+    transition:all 0.15s ease-out;
+}
+
+svg#search-icon {
+    padding:.5rem 0;
+    margin-left:0;
+    padding-left: 0;
+    vertical-align: middle;
+    padding-right: 3px;
+    fill:var(--ocean-blue);
+    border: 0;
+    cursor:pointer;
+    
+}
+
+
+input.blog-search-input {
+    width:0;
+    padding:.5rem 0;
+    vertical-align: middle;
+    border: 0;
+    margin-left:0;
+    padding-left: 0;
+    outline: none;
+    font-size: .70rem;
+    transition:all 0.15s ease-out;
+}
+
+a.nav-link.hompage-nav-login {
+    margin-right: 0.5rem;
+}
+a.nav-link.nav-customer-support {
+    margin-right: 1.5rem;
+}
+
+/* hover state for the navigation bar  */
+
+a.nav-link:hover,.nav-link:hover .link-label-icon,.nav-link:hover svg.dropdown-icon{
+    fill:rgb(0,145,174);
+    color:rgb(0,145,174);
+    transition: color .3s ease-in-out;
+    transition: fill .3s ease-in-out;
+}

@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/eb855865d3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <title>Hubspot Home</title>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                                         aria-controls="language-submenu" class="nav-link">
                                         <span class="nav-link-label link-label-global">
                                             <!-- svg for globe stand icon  -->
-                                            <svg version="1.1" width="14" height="16" id="globe-stand"
+                                            <svg class="link-label-icon" version="1.1" id="globe-stand"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 width="31.716px" height="31.717px" viewBox="0 0 31.716 31.717"
@@ -95,9 +96,58 @@
                                                 </g>
                                             </svg>
                                             English
+                                            <!-- dropdown icon  -->
+                                            <svg class="dropdown-icon" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 25.93 25.93" style="enable-background:new 0 0 25.93 25.93;"
+                                                xml:space="preserve">
+                                                <g>
+                                                    <g id="c118_triangle">
+                                                        <path
+                                                            d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554
+			H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2
+			c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z" />
+                                                    </g>
+                                                    <g id="Capa_1_184_">
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                            </svg>
                                         </span>
                                     </a>
                                 </div>
+                                <!-- dropdown items for language section  -->
+
                             </li>
 
                             <!-- second nav group item  next to language nav group-->
@@ -106,16 +156,10 @@
                                     <a href="#" role="menuitem" class="nav-link">
                                         <span class="nav-link-label link-label-contactus">
                                             <!-- svg for human icon  -->
-                                            <svg role="presentation" width="14" height="16"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <defs>
-                                                    <path
-                                                        d="M323.963 81c2.124 0 3.852 1.778 3.852 3.964 0 1.905-.56 3.606-1.435 4.719-.661.843-1.502 1.35-2.417 1.35-.908 0-1.742-.5-2.4-1.33-.884-1.114-1.452-2.823-1.452-4.739 0-2.186 1.728-3.964 3.852-3.964zm3.487 9.089a8.438 8.438 0 012.898 2.2c.432.508.422 1.26-.012 1.766-1.545 1.805-3.812 2.945-6.33 2.945-2.547 0-4.836-1.165-6.382-3.004-.41-.488-.376-1.22.037-1.705a8.437 8.437 0 012.836-2.174c.895 1.272 2.118 2.06 3.466 2.06 1.358 0 2.59-.799 3.487-2.088z"
-                                                        id="nav-contact-sales" />
-                                                </defs>
-                                                <use xlink:href="#nav-contact-sales" transform="translate(-317 -81)"
-                                                    fill-rule="evenodd" />
+                                            <svg id="human-svg" class="link-label-icon" viewBox="0 0 8 8"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4 0c-1.1 0-2 1.12-2 2.5s.9 2.5 2 2.5 2-1.12 2-2.5-.9-2.5-2-2.5zm-2.09 5c-1.06.05-1.91.92-1.91 2v1h8v-1c0-1.08-.84-1.95-1.91-2-.54.61-1.28 1-2.09 1-.81 0-1.55-.39-2.09-1z" />
                                             </svg>
                                             Contact Sales
                                         </span>
@@ -127,9 +171,10 @@
                         <!-- right side nav-->
                         <ul class="right-nav nav-group">
                             <!-- searchbar  -->
-                            <li class="nav-group-item search-item">
+                            <li id="search-bounding-box" class="nav-group-item search-item">
                                 <!-- svg for search icon  -->
-                                <svg version="1.1" widht='18' height='20' id="search-icon"
+                                <label for="search-input">
+                                    <svg version="1.1" widht='12' height='14' id="search-icon"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     x="0px" y="0px" viewBox="0 0 487.95 487.95"
                                     style="enable-background:new 0 0 487.95 487.95;" xml:space="preserve">
@@ -171,31 +216,79 @@
                                     <g>
                                     </g>
                                 </svg>
-                                <input type="search" class="search-bar" placeholder="search">
+                                </label>
+                                
+                                <input type="search" id="search-input" class="blog-search-input" placeholder="search..." aria-label="search">
                             </li>
 
                             <!-- login item  -->
                             <li class="nav-group-item login-item">
-                                <a role="memuitem" href="#" class="nv-link">
-                                    <span class="nav-link-label link-label-login">Log in</span>
-                                </a>
+                                <a data-logged-in-text="Go to my account" role="memuitem" href="#"
+                                    class="nav-link hompage-nav-login">Log in</a>
                             </li>
 
                             <!-- customer support item  -->
                             <li class="nav-group-item customer-support-item">
-                                <a role="menuitem" href="#" class="nav-link">
-                                    <span class="nav-link-label link-label-customer-support"></span>
-                                </a>
+                                <a role="menuitem" href="#" class="nav-link nav-customer-support">Customer Support</a>
                             </li>
 
                             <!-- about item and it has dropdown  -->
                             <li class="nav-group-item nav-group-has-dropdown about-item">
                                 <div class="nav-link-wrapper">
                                     <a role="menuitem" href="#" aria-haspopup="true" aria-expanded="false"
-                                        class="nav-link" aria-controls="about-submenu">
-                                        <span class="nav-link-label link-label-about">About</span>
+                                        class="nav-link" aria-controls="about submenu">
+                                        <span class="nav-link-label link-label-about">About
+                                            <!-- dropdown icon  -->
+                                            <svg class="dropdown-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 25.93 25.93" style="enable-background:new 0 0 25.93 25.93;"
+                                                xml:space="preserve">
+                                                <g>
+                                                    <g id="c118_triangle">
+                                                        <path
+                                                            d="M25.397,4.554h-2.042l-9.974,12.644c-0.101,0.124-0.256,0.197-0.416,0.197c-0.164,0-0.315-0.073-0.419-0.197L2.575,4.554
+			H0.532c-0.206,0-0.392,0.115-0.479,0.299c-0.09,0.184-0.064,0.403,0.06,0.561l12.435,15.762c0.104,0.125,0.255,0.2,0.419,0.2
+			c0.16,0,0.315-0.075,0.416-0.2L25.816,5.413c0.128-0.157,0.148-0.377,0.058-0.561C25.789,4.669,25.601,4.554,25.397,4.554z" />
+                                                    </g>
+                                                    <g id="Capa_1_184_">
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                            </svg>
+                                        </span>
                                     </a>
                                 </div>
+                                <!-- dropdown items for about section -->
+
                             </li>
                         </ul>
                     </section>
@@ -237,9 +330,10 @@
                                     <div class="nav-link-wrapper">
                                         <a role="menu-item" href="#" class="nav-link">
                                             <span class="nav-link-label resources-label">Resources</span>
-                                            <!-- svg for down arrow  -->
                                         </a>
                                     </div>
+                                    <!-- dropdown items for Resources section  -->
+
                                 </li>
                             </ul>
                             <!-- button right side  -->
@@ -262,6 +356,7 @@
             </nav>
         </section>
     </header>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
