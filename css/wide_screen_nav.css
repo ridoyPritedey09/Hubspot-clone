@@ -12,19 +12,19 @@ body {
     font-family: 'Avenir next', 'Open Sans', sans-serif;
 }
 
-
 /* scrolling nav styles */
 
-.nav-wrapper {
+.scrolling-nav-wrapper.nav-wrapper {
     position: relative;
-    z-index: 95;
+    /* z-index: 95; */
+    box-shadow: 0px 1px 9px -2px rgb(204, 202, 202);
 }
 
 .upper-scroll-nav {
     background-color: #fff;
     width: 100%;
     font-size: .75rem;
-    line-height: 4.42;
+    line-height: 4.41;
 }
 
 .page-width-normal {
@@ -45,135 +45,240 @@ body {
 }
 
 .nav-group-item {
+    position: relative;
     display: inline-block;
     padding: 0 5px;
     font-weight: 500;
 }
 
-.nav-link-wrapper{
+.nav-link-wrapper {
     display: block;
     padding: 0 .5rem;
 }
 
-.nav-link{
+.nav-link {
     color: rgb(12, 45, 51);
 }
 
-.nav-link-label{
+.nav-link-label {}
 
-}
-
-.link-label-icon{
+.link-label-icon {
     width: 1.2rem;
     height: 3.4rem;
     vertical-align: top;
     margin-right: 3px;
 }
 
-svg.dropdown-icon{
+svg.dropdown-icon {
     width: 10px;
     height: 8px;
 }
 
+/* scrollilng nav upper part styles */
 
+.nav-link-english {
+    padding-left: 0;
+}
 
- /* scrollilng nav upper part styles */
- .nav-link-english{
-     padding-left:0;
- }
- /* .nav-link-about{
+/* .nav-link-about{
     margin-right: 1.3rem;
  } */
 
- span.nav-link-label.link-label-global {
+span.nav-link-label.link-label-global {
     margin-right: .62rem;
 }
 
-
-#human-svg.link-label-icon{
+#human-svg.link-label-icon {
     width: 1rem;
 }
 
-.search-item{
+.search-item {
     line-height: 2.5;
     border-radius: 5px;
-    transition:all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 }
 
 svg#search-icon {
-    padding:.5rem 0;
-    margin-left:0;
+    padding: .5rem 0;
+    margin-left: 0;
     padding-left: 0;
     vertical-align: middle;
     padding-right: 3px;
-    fill:var(--ocean-blue);
+    fill: var(--ocean-blue);
     border: 0;
-    cursor:pointer;
-    
+    cursor: pointer;
 }
 
-
 input.blog-search-input {
-    width:0;
-    padding:.5rem 0;
+    width: 0;
+    padding: .5rem 0;
     vertical-align: middle;
     border: 0;
-    margin-left:0;
+    margin-left: 0;
     padding-left: 0;
     outline: none;
     font-size: .70rem;
-    transition:all 0.15s ease-out;
+    transition: all 0.15s ease-out;
 }
 
 a.nav-link.hompage-nav-login {
     margin-right: 0.5rem;
 }
+
 a.nav-link.nav-customer-support {
     margin-right: 1.5rem;
 }
 
-
 /* scrolling nav down part styles  */
+
 nav.down-scroll-nav {
     font-size: 1.1rem;
 }
 
 .down-nav-inner.nav-inner {
-    line-height: 4.5;
+    width: 100%;
+    line-height: 4.55;
     justify-content: space-between;
+    gap: 2rem;
 }
 
-.hubsopt-logo.hidden-in-mobile{
-    width: 110px;
+.hubsopt-logo.hidden-in-mobile {
+    width: 105px;
     margin-left: .4rem;
 }
 
 img.hubspot-logo {
     width: 100%;
     vertical-align: middle;
-    
 }
 
 #commercial-submenu.nav-groups-wrapper {
-    width: 100%;
-    max-width: calc(100% - (110px+5rem));
-    align-items: flex-start;
-    margin-left: 5rem;
+    /* width: 100%; */
+    width: calc(100% - (100px + 3rem));
+    margin-left: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 0;
 }
 
-.commercial-submenu-item.nav-group-item-1,.commercial-submenu-item.nav-group-item-2{
+.commercial-submenu-item.nav-group-item-1, .commercial-submenu-item.nav-group-item-2 {
     margin-right: .3rem;
 }
+
+/* all dropdown menu styels  */
+
+/* language dropdown menu styles  */
+.hs-dropdown_menu{
+    z-index:1;
+    visibility:var(--visibility,hidden);
+    position: absolute;
+    width: 96.11px;
+    background-color: #fff;
+    border: 1px solid var(--blue-gray);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-radius: 3px;
+    transition: visibility .3s .4s ease-in;
+}
+
+.hs-nav-link_wrapper.nav-link-wrapper::before{
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    content: "";
+    border: .7rem solid transparent;
+    border-bottom: .7rem solid var(--blue-gray);
+    bottom: -1px;
+    left: 65%;
+    height: 0;
+    width: 0;
+    transform: var(--rotateX, rotateX(0));
+    transition: visibility .3s .4s ease-in;
+}
+
+.hs-nav-link_wrapper.nav-link-wrapper::after{
+    visibility:hidden;
+    z-index: 2;
+    position: absolute;
+    content: "";
+    border: .6rem solid transparent;
+    border-bottom: .6rem solid #fff;
+    width: 0;
+    height: 0;
+    left: 67%;
+    bottom: -1px;
+    transform: var(--rotateX, rotateX(0));
+    transition: visibility .3s .4s ease-in;
+
+}
+
+
+.hs-nav-link_wrapper.nav-link-wrapper {
+    position: relative;
+}
+
+
+li.hs-dropdown_item {
+    height: 2.4rem;
+    font-weight: 600px;
+    font-size: .8rem;
+    color:rgb(29, 67, 105);
+}
+li.hs-dropdown_item>a:active,li.hs-dropdown_item>a:visited{
+    color:rgb(29, 67, 105);
+
+}
+
+
+
+
+/* language dropdown styles  */
+.english-nav-link_wrappernav-link-wrapper::before {
+    border: .7rem solid transparent;
+    border-bottom: .7rem solid var(--blue-gray);
+    bottom: -1px;
+    left: 65%;
+}
+
+.english-nav-link_wrapper.nav-link-wrapper::after {
+    border: .6rem solid transparent;
+    border-bottom: .6rem solid #fff;
+    left: 67%;
+    bottom: -1px;
+}
+
+.lang-dropdown_menu {
+    width: 96.11px;
+}
+
+/* about dropdown styles  */
+
+
+.about-nav-link_wrapper.nav-link-wrapper::before {
+    border: .7rem solid transparent;
+    border-bottom: .7rem solid var(--blue-gray);
+    bottom: -1px;
+    left: 65%;
+}
+
+.about-nav-link_wrapper.nav-link-wrapper::after {
+    border: .6rem solid transparent;
+    border-bottom: .6rem solid #fff;
+    left: 67%;
+    bottom: -1px;
+}
+.hs-dropdown_menu.about-dropdown_menu{
+    width: 160px;
+    right: -1rem;
+}
+
 
 
 /* start free or get demo button  styles*/
 
-.nav-btn-wrapper.nav-link-wrapper{
-    padding:0 0.5rem;
+.nav-btn-wrapper.nav-link-wrapper {
+    padding: 0 0.5rem;
 }
 
 a#get-demo-btn {
@@ -184,17 +289,36 @@ a#get-demo-btn {
     border-radius: 3px;
 }
 
-
 /* hover state for the navigation bar  */
 
-a.nav-link:hover,.nav-link:hover .link-label-icon,.nav-link:hover svg.dropdown-icon{
-    fill:rgb(0,145,174);
-    color:rgb(0,145,174);
-    transition: color .3s ease-in-out;
-    transition: fill .3s ease-in-out;
+a.nav-link:hover, .nav-link:hover .link-label-icon, .nav-link:hover svg.dropdown-icon {
+    text-decoration: underline;
+    fill: rgb(0, 145, 174);
+    color: rgb(0, 145, 174);
+    transition: color .2s ease-in-out;
+    transition: fill .2s ease-in-out;
 }
 
 /* start free or get demo button hover  styles*/
-a#get-demo-btn:hover{
-    background-color: rgba(255, 122, 89,.7);
+
+a#get-demo-btn:hover {
+    text-decoration: none;
+    background-color: rgba(255, 122, 89, .7);
+    transition: background-color .20s ease-out;
 }
+
+/* language menu will appear after hover over language button  */
+
+.hs-nav-group_dropdown:hover .hs-dropdown_menu{
+    visibility: visible;
+}
+
+.hs-nav-group_dropdown:hover .hs-nav-link_wrapper.nav-link-wrapper::before, 
+.hs-nav-group_dropdown:hover .hs-nav-link_wrapper.nav-link-wrapper::after {
+    visibility: visible;
+}
+
+/* .nav-link-english.nav-link-wrapper::before .lang-dropdown_menu::hover{
+    visibility: none;
+} */
+

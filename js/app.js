@@ -15,3 +15,44 @@ search_input.addEventListener("blur", (e) => {
     search_bounding_box.style.cssText = "";
     search_input.style.cssText = "width:0;"
 });
+
+
+
+// hover items for language nav item and about nav item
+
+// selected element
+const hs_dropdown_menu = document.querySelector(".hs-dropdown_menu");
+const nav_link = document.querySelector(".nav-link");
+const nav_link_wrapper = document.querySelector(".hs-nav-link_wrapper");
+const dropdown_icon = document.querySelector(".dropdown-icon");
+const link_label_icon = document.querySelector(".link-label-icon");
+const get_css_style_before = window.getComputedStyle(nav_link_wrapper,"::before");
+const get_css_style_after = window.getComputedStyle(nav_link_wrapper,"::after");
+
+// nav hover items toogle for before and after angle
+hs_dropdown_menu.addEventListener("mouseover",(e)=>{
+    nav_link_wrapper.style.setProperty("--rotateX",'rotateX(90deg)');
+});
+
+hs_dropdown_menu.addEventListener("mouseout",(e)=>{
+    nav_link_wrapper.style.setProperty("--rotateX",'rotateX(0deg)');
+});
+
+
+// current nav item color will appear when mouse is hover the dropdown menu items
+hs_dropdown_menu.addEventListener("mouseover",(e)=>{
+    nav_link.style.color='rgb(0, 145, 174)';
+    dropdown_icon.style.fill='rgb(0, 145, 174)';
+    link_label_icon.style.fill='rgb(0, 145, 174)';
+    
+});
+
+hs_dropdown_menu.addEventListener("mouseout",(e)=>{
+    nav_link.style.color='';
+    dropdown_icon.style.fill='';
+    link_label_icon.style.fill='';
+    
+});
+
+
+// hover items for the nav link end 

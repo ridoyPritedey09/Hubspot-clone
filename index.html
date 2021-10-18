@@ -15,17 +15,17 @@
     <!-- hubspot header which contains navbar and hero banner -->
     <header>
         <!-- nav wrapper for two navigation -->
-        <section class="nav-wrapper">
+        <section class="scrolling-nav-wrapper nav-wrapper">
             <!-- scroll nav upper part  -->
             <nav class="upper-scroll-nav">
                 <section class="page-width-normal">
                     <section class="nav-inner">
                         <ul role="menu" class="left-nav nav-group">
                             <!-- first nav group item before contact sales -->
-                            <li class="nav-group-item nav-group-has-dropdown">
-                                <div class="nav-link-english nav-link-wrapper">
+                            <li class="nav-group_english nav-group-item hs-nav-group_dropdown nav-group-has-dropdown">
+                                <div class="english-nav-link_wrapper hs-nav-link_wrapper nav-link-wrapper">
                                     <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false"
-                                        aria-controls="language-submenu" class="nav-link">
+                                        aria-controls="language-submenu" class="nav-link_lang nav-link">
                                         <span class="nav-link-label link-label-global">
                                             <!-- svg for globe stand icon  -->
                                             <svg class="link-label-icon" version="1.1" id="globe-stand"
@@ -146,7 +146,17 @@
                                     </a>
                                 </div>
                                 <!-- dropdown items for language section  -->
-
+                                <section aria-hidden="true" role="Lang-sub-menu" class="hs-dropdown_menu lang-dropdown_menu">
+                                    <ul class="hs-dropdown_items lang-dropdown_items">
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">日本語</a></li>
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">Deutsch</a></li>
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">English</a></li>
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">Español</a></li>
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">Português</a></li>
+                                        <li class="hs-dropdown_item lang-dropdown_item"><a href="#">Français</a></li>
+                                        
+                                    </ul>
+                                </section>
                             </li>
 
                             <!-- second nav group item  next to language nav group-->
@@ -233,8 +243,8 @@
                             </li>
 
                             <!-- about item and it has dropdown  -->
-                            <li class="nav-group-item nav-group-has-dropdown about-item">
-                                <div class="nav-link-about nav-link-wrapper">
+                            <li class="nav-group-item hs-nav-group_dropdown about-nav-group-dropdown nav-group-has-dropdown about-item">
+                                <div class="nav-link-about hs-nav-link_wrapper about-nav-link_wrapper nav-link-wrapper">
                                     <a role="menuitem" href="#" aria-haspopup="true" aria-expanded="false"
                                         class="nav-link" aria-controls="about submenu">
                                         <span class="nav-link-label link-label-about">About
@@ -288,7 +298,15 @@
                                     </a>
                                 </div>
                                 <!-- dropdown items for about section -->
-
+                                <section aria-hidden="true" role="About-sub-menu" class="hs-dropdown_menu about-dropdown_menu">
+                                    <ul class="hs-dropdown_items about-dropdown_items">
+                                        <li class="hs-dropdown_item about-dropdown_item"><a href="#">About Us</a></li>
+                                        <li class="hs-dropdown_item about-dropdown_item"><a href="#">Careers</a></li>
+                                        <li class="hs-dropdown_item about-dropdown_item"><a href="#">Contact Us</a></li>
+                                        <li class="hs-dropdown_item about-dropdown_item"><a href="#">Investor Relations</a></li>
+                                        <li class="hs-dropdown_item about-dropdown_item"><a href="#">Management Team</a></li>
+                                    </ul>
+                                </section>
                             </li>
                         </ul>
                     </section>
