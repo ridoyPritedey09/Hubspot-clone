@@ -13,10 +13,9 @@ body {
 }
 
 
-/* common navigation class styles */
+/* scrolling nav styles */
 
 .nav-wrapper {
-    background-color: aliceblue;
     position: relative;
     z-index: 95;
 }
@@ -53,7 +52,7 @@ body {
 
 .nav-link-wrapper{
     display: block;
-    padding: 0.5
+    padding: 0 .5rem;
 }
 
 .nav-link{
@@ -72,13 +71,20 @@ body {
 }
 
 svg.dropdown-icon{
-    width: 9px;
-    height: 7px;
+    width: 10px;
+    height: 8px;
 }
 
 
 
- /* have these upper class but need another design to configure */
+ /* scrollilng nav upper part styles */
+ .nav-link-english{
+     padding-left:0;
+ }
+ /* .nav-link-about{
+    margin-right: 1.3rem;
+ } */
+
  span.nav-link-label.link-label-global {
     margin-right: .62rem;
 }
@@ -126,6 +132,59 @@ a.nav-link.nav-customer-support {
     margin-right: 1.5rem;
 }
 
+
+/* scrolling nav down part styles  */
+nav.down-scroll-nav {
+    font-size: 1.1rem;
+}
+
+.down-nav-inner.nav-inner {
+    line-height: 4.5;
+    justify-content: space-between;
+}
+
+.hubsopt-logo.hidden-in-mobile{
+    width: 110px;
+    margin-left: .4rem;
+}
+
+img.hubspot-logo {
+    width: 100%;
+    vertical-align: middle;
+    
+}
+
+#commercial-submenu.nav-groups-wrapper {
+    width: 100%;
+    max-width: calc(100% - (110px+5rem));
+    align-items: flex-start;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0;
+}
+
+.commercial-submenu-item.nav-group-item-1,.commercial-submenu-item.nav-group-item-2{
+    margin-right: .3rem;
+}
+
+
+/* start free or get demo button  styles*/
+
+.nav-btn-wrapper.nav-link-wrapper{
+    padding:0 0.5rem;
+}
+
+a#get-demo-btn {
+    color: #fff;
+    background-color: var(--orange);
+    padding: 0.6rem 1.2rem;
+    font-size: .9rem;
+    border-radius: 3px;
+}
+
+
 /* hover state for the navigation bar  */
 
 a.nav-link:hover,.nav-link:hover .link-label-icon,.nav-link:hover svg.dropdown-icon{
@@ -133,4 +192,9 @@ a.nav-link:hover,.nav-link:hover .link-label-icon,.nav-link:hover svg.dropdown-i
     color:rgb(0,145,174);
     transition: color .3s ease-in-out;
     transition: fill .3s ease-in-out;
+}
+
+/* start free or get demo button hover  styles*/
+a#get-demo-btn:hover{
+    background-color: rgba(255, 122, 89,.7);
 }
