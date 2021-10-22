@@ -29,8 +29,8 @@ const nav_link_wrapper = document.querySelector(".hs-nav-link_wrapper");
 const nav_link_wrapper_all = document.querySelectorAll(".hs-nav-link_wrapper");
 const dropdown_icon_all = document.querySelectorAll(".dropdown-icon");
 const link_label_icon_all = document.querySelectorAll(".hs-label_hover");
-const get_css_style_before = window.getComputedStyle(nav_link_wrapper, "::before");
-const get_css_style_after = window.getComputedStyle(nav_link_wrapper, "::after");
+// const get_css_style_before = window.getComputedStyle(nav_link_wrapper, "::before");
+// const get_css_style_after = window.getComputedStyle(nav_link_wrapper, "::after");
 
 
 
@@ -107,5 +107,32 @@ dropdown_menu_array.forEach((item, index, arr) => {
 
 // these code up above are work for upperside of the scroll navigation web version end.
 
+// hover for the software dropdown menu 
+const software_link_wrapper = document.querySelector(".software-link_wrapper.nav-link-wrapper");
+const software_drop_link = document.querySelector("#software_drop_link");
+const software_dropdown_content = document.querySelector(".software-dropdown_menu");
+// const software_link_border_after =  window.getComputedStyle(software_link_wrapper, "::after");
+
+software_drop_link.addEventListener("mouseover",()=>{
+    software_link_wrapper.style.setProperty("--visibility","visible");
+    software_dropdown_content.style.visibility ="visible";
+});
+
+software_drop_link.addEventListener("mouseout",()=>{
+    software_link_wrapper.style.setProperty("--visibility","hidden");
+    software_dropdown_content.style.visibility ="hidden";
+});
+
+software_dropdown_content.addEventListener("mouseover",()=>{
+    software_link_wrapper.style.setProperty("--visibility","visible");
+    software_dropdown_content.style.visibility ="visible";
+});
+
+software_dropdown_content.addEventListener("mouseout",()=>{
+    software_link_wrapper.style.setProperty("--visibility","hidden");
+    software_dropdown_content.style.visibility ="hidden";
+});
 // hover items for the nav link end 
+
+
 
