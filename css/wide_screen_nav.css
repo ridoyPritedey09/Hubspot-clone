@@ -61,7 +61,6 @@ body {
     color: rgb(12, 45, 51);
 }
 
-.nav-link-label {}
 
 .link-label-icon {
     width: 1.2rem;
@@ -286,7 +285,7 @@ a#get-demo-btn {
 
 /* nav dropdown softare section all styles start  */
 
-.commercial-submenu-item.nav-group-item-1 {
+.commercial-submenu-item.nav-group-item-1, .commercial-submenu-item.nav-group-item-2, .commercial-submenu-item.nav-group-item-3 {
     position: static;
 }
 
@@ -295,7 +294,6 @@ ul.software-dropdown_menu {
     color: rgb(12, 45, 51);
     min-width: 835px;
     max-width: 1080px;
-    /* box-sizing: border-box; */
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -323,14 +321,6 @@ ul.software-dropdown_menu {
 
 .sft-dropdown-item_wrapper {
     width: 100%;
-}
-
-section.sft-sub-header_container {
-    /*display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around; */
-    /* gap: 1rem; */
 }
 
 .sft-product_item {
@@ -364,21 +354,22 @@ section.sft-sub-header_container {
 /* sft dropdown item 2  */
 
 /* dropdown of software wrapper bottom border */
-.software-link_wrapper{
+
+.software-link_wrapper {
     position: relative;
 }
 
-.software-link_wrapper::after{
-    content:"";
-    height:4px;
+.software-link_wrapper::after {
+    content: "";
+    height: 4px;
     width: 100%;
-    background-color:#425b76;
-    position:absolute;
+    background-color: #425b76;
+    position: absolute;
     z-index: 1;
-    bottom:-3px;
-    left:-3px;
+    bottom: -3px;
+    left: -3px;
     border-radius: 1rem;
-    opacity:1;
+    opacity: 1;
     transition: .5s visibility ease;
     transition-delay: 0.5s;
     visibility: var(--visibility, hidden);
@@ -433,7 +424,8 @@ section.sft-sub-header_container {
     line-height: 1.3rem;
     margin-bottom: .5rem;
 }
-.sft-hub-box_heading-5{
+
+.sft-hub-box_heading-5 {
     margin-bottom: .2rem;
 }
 
@@ -454,19 +446,21 @@ section.sft-sub-header_container {
     margin-top: 1.4rem;
 }
 
-.sft-dropdown_item-3 h4{
+.sft-dropdown_item-3 h4 {
     font-size: 1rem;
 }
-.sft-dropdown_item-3 p{
-    margin-top:.8rem;
+
+.sft-dropdown_item-3 p {
+    margin-top: .8rem;
     font-size: .8rem;
 }
 
 .sft-link_direct a:active, .sft-link_direct a:visited {
     color: #007a8c;
 }
-.upgrade_btn{
-    display:inline-block;
+
+.upgrade_btn {
+    display: inline-block;
     background-color: #00bda5;
     color: #fff;
     border-radius: 3px;
@@ -474,8 +468,80 @@ section.sft-sub-header_container {
     font-size: .7rem;
 }
 
+/* nav dropdown softare section all styles ends  */
 
-/* nav dropdown softare section all styles start  */
+/* nav dropdown resources section all styles start  */
+.nav-link-wrapper.res-link_wrapper.wide-link_wrapper {
+    position: relative;
+}
+.res-link_wrapper.wide-link_wrapper::after {
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: #425b76;
+    position: absolute;
+    z-index: 1;
+    bottom: -3px;
+    left: -3px;
+    border-radius: 1rem;
+    opacity: 1;
+    transition: 1s visibility ease;
+    transition-delay: 0.5s;
+    visibility: var(--visibility, hidden);
+}
+
+.resources-dropdown_menu {
+    max-width: 735px;
+    position: absolute;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #fff;
+    color: rgb(12, 45, 51);
+    border: 1px solid #cbd6e2;
+    border-radius: 0.1875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    transition: 1s visibility ease;
+    visibility: hidden;
+}
+
+.res-dropdown_items {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.res-icon_container {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #f5f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.res-links_container h4 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+a.res_link.nav-link {
+    display: block;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 0.5rem 0rem;
+}
+
+/* nav dropdown resources section all styles end  */
 
 /* hover state for the navigation bar  */
 
@@ -509,3 +575,11 @@ a#get-demo-btn:hover {
     color: #007a8c;
     text-decoration: underline;
 }
+
+
+/* above  all code are work for scrolling navigation  */
+
+
+
+
+/* down all code are work for sticky navigation  */

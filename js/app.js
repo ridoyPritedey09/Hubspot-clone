@@ -53,8 +53,6 @@ hs_dropdown_menu_all.forEach(item => {
 // nav hover items toggle for before and after angle (end)
 
 
-
-// resuseable funciton for hs-dropdown_menu style
 // making some array for better usecase 
 const dropdown_menu_array = Array.from(hs_dropdown_menu_all);
 const nav_link_hover_array = Array.from(nav_link_hover_all);
@@ -66,16 +64,16 @@ let parentIndex = '';
 
 // reuseable code for mouseover and mouseout state 
 
-function changeStyles(color,decor) {
+function changeStyles(color, decor) {
     nav_link_hover_array[parentIndex].style.color = color;
     nav_link_hover_array[parentIndex].style.textDecoration = decor;
     dropdown_icon_array[parentIndex].style.fill = color;
-    if(link_label_array[parentIndex] == null){
-        return ;
-    }else{
+    if (link_label_array[parentIndex] == null) {
+        return;
+    } else {
         link_label_array[parentIndex].style.fill = color;
     }
-    
+
 }
 
 // current nav item color will appear when mouse is hover the dropdown menu items
@@ -84,7 +82,7 @@ dropdown_menu_array.forEach((item, index, arr) => {
     item.addEventListener("mouseover", (e) => {
         if (arr[index] == e.target.closest(".hs-dropdown_menu")) {
             parentIndex = index;
-            changeStyles('rgb(0, 145, 174)','underline');
+            changeStyles('rgb(0, 145, 174)', 'underline');
         } else {
             return;
         }
@@ -97,7 +95,7 @@ dropdown_menu_array.forEach((item, index, arr) => {
     item.addEventListener("mouseout", (e) => {
         if (arr[index] == e.target.closest(".hs-dropdown_menu")) {
             parentIndex = index;
-            changeStyles('','');
+            changeStyles('', '');
         } else {
             return;
         }
@@ -107,32 +105,77 @@ dropdown_menu_array.forEach((item, index, arr) => {
 
 // these code up above are work for upperside of the scroll navigation web version end.
 
-// hover for the software dropdown menu 
-const software_link_wrapper = document.querySelector(".software-link_wrapper.nav-link-wrapper");
-const software_drop_link = document.querySelector("#software_drop_link");
-const software_dropdown_content = document.querySelector(".software-dropdown_menu");
-// const software_link_border_after =  window.getComputedStyle(software_link_wrapper, "::after");
 
-software_drop_link.addEventListener("mouseover",()=>{
-    software_link_wrapper.style.setProperty("--visibility","visible");
-    software_dropdown_content.style.visibility ="visible";
+// hover for the software & resources dropdown menu 
+const wide_link_wrapper_all = document.querySelectorAll(".wide-link_wrapper");
+const wide_drop_link_all = document.querySelectorAll("#wide_drop_link");
+const wide_dropdown_content_all = document.querySelectorAll(".wide-dropdown_menu");
+const wide_dropdown_icon_all = document.querySelectorAll(".wide-dropdown_icon");
+// making of array 
+
+const wide_link_wrapper_array = Array.from(wide_link_wrapper_all);
+const wide_drop_link_array = Array.from(wide_drop_link_all);
+const wide_dropdown_content_array = Array.from(wide_dropdown_content_all);
+const wide_dropdown_icon_array =Array.from(wide_dropdown_icon_all);
+
+const visibility = function (appear, currentIndex, color, decor) {
+    wide_link_wrapper_array[currentIndex].style.setProperty("--visibility", appear);
+    wide_dropdown_content_array[currentIndex].style.visibility = appear;
+    wide_drop_link_array[currentIndex].style.cssText ="color:"+color+";text-decoration:"+decor+";";
+    wide_dropdown_icon_array[currentIndex].style.fill = color;
+};
+
+wide_drop_link_array.forEach((item, index, arr) => {
+    item.addEventListener("mouseover", (e) => {
+        if (arr[index] == e.target.closest("#wide_drop_link")) {
+            let currentIndex = index;
+
+            visibility("visible", currentIndex,'rgb(0, 145, 174)', 'underline');
+        } else {
+            return;
+        }
+    });
 });
 
-software_drop_link.addEventListener("mouseout",()=>{
-    software_link_wrapper.style.setProperty("--visibility","hidden");
-    software_dropdown_content.style.visibility ="hidden";
+wide_drop_link_array.forEach((item, index, arr) => {
+    item.addEventListener("mouseout", (e) => {
+        if (arr[index] == e.target.closest("#wide_drop_link")) {
+            let currentIndex = index;
+
+            visibility("hidden", currentIndex, '', '');
+        } else {
+            return;
+        }
+    });
 });
 
-software_dropdown_content.addEventListener("mouseover",()=>{
-    software_link_wrapper.style.setProperty("--visibility","visible");
-    software_dropdown_content.style.visibility ="visible";
+wide_dropdown_content_array.forEach((item, index, arr) => {
+    item.addEventListener("mouseover", (e) => {
+        if (arr[index] == e.target.closest(".wide-dropdown_menu")) {
+            let currentIndex = index;
+
+            visibility("visible", currentIndex, 'rgb(0, 145, 174)', 'underline');
+        } else {
+            return;
+        }
+    });
 });
 
-software_dropdown_content.addEventListener("mouseout",()=>{
-    software_link_wrapper.style.setProperty("--visibility","hidden");
-    software_dropdown_content.style.visibility ="hidden";
+wide_dropdown_content_array.forEach((item, index, arr) => {
+    item.addEventListener("mouseout", (e) => {
+        if (arr[index] == e.target.closest(".wide-dropdown_menu")) {
+            let currentIndex = index;
+
+            visibility("hidden", currentIndex, '', '');
+        } else {
+            return;
+        }
+    });
 });
-// hover items for the nav link end 
+// hover items for the nav link end
+// these code up above are work for scrolling navigation bar.
 
 
 
+
+// next
