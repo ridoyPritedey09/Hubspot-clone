@@ -7,11 +7,16 @@
 
 @import url(wide_screen_nav.css);
 
+/* import from mobile_screen_nav.css 
+                                    */
+@import url(./mobile_screen_nav.css);
+
 /* colors 
                */
 
 :root {
-    --orange: rgb(255, 122, 89);
-    --ocean-blue: rgb(0, 164, 189);
-    --blue-gray: rgb(203,214,226);
+  --orange: rgb(255, 122, 89);
+  --ocean-blue: rgb(0, 164, 189);
+  --blue-gray: rgb(203, 214, 226);
+  --text-color: #33475b;
 }

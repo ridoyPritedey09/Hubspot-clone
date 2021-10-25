@@ -170,3 +170,35 @@ wide_dropdown_content_array.forEach((item, index, arr) => {
 });
 // hover items for the nav link end
 // these code up above are work for scrolling navigation bar.
+
+/*
+these down code are work for mobile navigation bar 
+                                                  */
+const instance_button = document.querySelector(".mbl-instance_button");
+const cross_button = document.querySelector(".mbl-cross_button");
+const toggle_content = document.querySelector(".mobile-toggle-visible_content");
+const searchbox_appearance = document.querySelector(".mbl-nav_searchbox");
+const toggle_box_shadow = document.querySelector(
+  ".moblie-nav-instance_wrapper"
+);
+
+instance_button.addEventListener("click", () => {
+  instance_button.style.setProperty("--i_display", "none");
+  cross_button.style.setProperty("--c_display", "block");
+  cross_button.style.transform = "rotate(360deg)";
+  toggle_box_shadow.style.setProperty("--shadow", "0");
+  searchbox_appearance.style.setProperty("--s_display", "block");
+  toggle_content.style.setProperty("--t_display", "block");
+});
+
+cross_button.addEventListener("click", () => {
+  instance_button.style.setProperty("--i_display", "block");
+  instance_button.style.transform = "rotate(-360deg)";
+  cross_button.style.setProperty("--c_display", "none");
+  toggle_box_shadow.style.setProperty(
+    "--shadow",
+    "0px 1px 9px -2px rgb(204, 202, 202)"
+  );
+  searchbox_appearance.style.setProperty("--s_display", "none");
+  toggle_content.style.setProperty("--t_display", "none");
+});
