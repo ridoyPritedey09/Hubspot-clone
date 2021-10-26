@@ -183,22 +183,24 @@ const toggle_box_shadow = document.querySelector(
 );
 
 instance_button.addEventListener("click", () => {
-  instance_button.style.setProperty("--i_display", "none");
-  cross_button.style.setProperty("--c_display", "block");
-  cross_button.style.transform = "rotate(360deg)";
+  instance_button.style.setProperty("--i_visibility", "hidden");
+  cross_button.style.setProperty("--c_visibility", "visible");
+  cross_button.style.animation = "rotateCrossBefore .5s 0.2s ease";
   toggle_box_shadow.style.setProperty("--shadow", "0");
-  searchbox_appearance.style.setProperty("--s_display", "block");
-  toggle_content.style.setProperty("--t_display", "block");
+  searchbox_appearance.style.setProperty("--s_visibility", "visible");
+  toggle_content.style.setProperty("--t_visibility", "visible");
+  instance_button.style.animation = "rotateInstanceAfter";
 });
 
 cross_button.addEventListener("click", () => {
-  instance_button.style.setProperty("--i_display", "block");
-  instance_button.style.transform = "rotate(-360deg)";
-  cross_button.style.setProperty("--c_display", "none");
+  instance_button.style.setProperty("--i_visibility", "visible");
+  instance_button.style.animation = "rotateInstanceBefore 1s 0.2s ease";
+  cross_button.style.setProperty("--c_visibility", "hidden");
   toggle_box_shadow.style.setProperty(
     "--shadow",
     "0px 1px 9px -2px rgb(204, 202, 202)"
   );
-  searchbox_appearance.style.setProperty("--s_display", "none");
-  toggle_content.style.setProperty("--t_display", "none");
+  searchbox_appearance.style.setProperty("--s_visibility", "hidden");
+  toggle_content.style.setProperty("--t_visibility", "hidden");
+  cross_button.style.animation = "rotateCrossAfter";
 });
