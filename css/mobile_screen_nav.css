@@ -169,7 +169,8 @@ body {
   background-color: #fff;
   margin-top: 2rem;
   visibility: var(--t_visibility, hidden);
-  z-index: 8;
+  position: absolute;
+  margin-top: 1rem;
 }
 
 .mbl-side-content-buttons_wrapper {
@@ -281,6 +282,12 @@ body {
   }
   .mobile-toggle-visible_content {
     visibility: var(--t_visibility, hidden);
+  }
+}
+
+@media screen and (min-width: 866px) {
+  .mobile-toggle-visible_content {
+    display: none;
   }
 }
 

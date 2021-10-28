@@ -11,6 +11,10 @@
                                     */
 @import url(./mobile_screen_nav.css);
 
+/* import from main_blog_styles.css
+                                    */
+@import url(./main_blog_styles.css);
+
 /* colors 
                */
 
@@ -20,3 +24,5 @@
   --blue-gray: rgb(203, 214, 226);
   --text-color: #33475b;
 }
+
+

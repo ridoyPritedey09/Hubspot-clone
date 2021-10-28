@@ -15,7 +15,7 @@ body {
 
 /* scrolling nav styles */
 
-.scrolling-nav-wrapper.nav-wrapper {
+.scrolling-nav-wrapper.top-nav_wrapper {
   background-color: #fff;
   position: relative;
   z-index: 95;
@@ -37,6 +37,7 @@ body {
 }
 
 .nav-inner {
+  margin-left: -1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,6 +130,10 @@ a.nav-link.nav-customer-support {
   margin-right: 1.5rem;
 }
 
+.right-nav.nav-group {
+  margin-right: -0.6rem;
+}
+
 /* scrolling nav down part styles  */
 
 nav.down-scroll-nav {
@@ -160,6 +165,10 @@ img.hubspot-logo {
   align-items: center;
   justify-content: space-between;
   margin-right: 0;
+}
+
+.nav-group-item-button {
+  margin-right: -1.7rem;
 }
 
 .commercial-submenu-item.nav-group-item-1,
@@ -615,6 +624,7 @@ a#get-demo-btn:hover {
   align-items: center;
   gap: 0.5rem;
   font-weight: 550;
+  margin-left: -0.6rem;
 }
 
 section.stk-link_wrapper {
@@ -725,7 +735,7 @@ a.stk-nav-item_link {
 
 /* media queries for the nav  */
 @media (max-width: 866px) {
-  .scrolling-nav-wrapper.nav-wrapper {
+  .scrolling-nav-wrapper.top-nav_wrapper {
     display: none;
   }
 
