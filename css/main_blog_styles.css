@@ -29,7 +29,6 @@
 
 .blog_feature {
   border-radius: 5px;
-  transition: 0.2s ease;
 }
 
 .blog-figure_wrapper {
@@ -259,6 +258,7 @@
 }
 .form_checkbox {
   /* display: none; */
+  margin-right: 0.5rem;
 }
 .form_item {
   min-width: 46%;

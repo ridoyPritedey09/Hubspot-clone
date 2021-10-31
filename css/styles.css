@@ -15,6 +15,10 @@
                                     */
 @import url(./main_blog_styles.css);
 
+/* import from mobile_screen_nav.css 
+                                    */
+@import url(./footer_content.css);
+
 /* colors 
                */
 
@@ -25,4 +29,10 @@
   --text-color: #33475b;
 }
 
+.has-scale_up {
+  transition: transform 0.3s ease;
+}
 
+.has-scale_up:hover {
+  transform: scale(1.02);
+}
