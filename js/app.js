@@ -181,8 +181,10 @@ const searchbox_appearance = document.querySelector(".mbl-nav_searchbox");
 const toggle_box_shadow = document.querySelector(
   ".moblie-nav-instance_wrapper"
 );
+const body = document.querySelector("body");
 
 instance_button.addEventListener("click", () => {
+  body.style.overflowY = "hidden";
   instance_button.style.setProperty("--i_visibility", "hidden");
   cross_button.style.setProperty("--c_visibility", "visible");
   cross_button.style.animation = "rotateCrossBefore .5s 0.2s ease";
@@ -193,6 +195,7 @@ instance_button.addEventListener("click", () => {
 });
 
 cross_button.addEventListener("click", () => {
+  body.style.overflowY = "visible";
   instance_button.style.setProperty("--i_visibility", "visible");
   instance_button.style.animation = "rotateInstanceBefore 1s 0.2s ease";
   cross_button.style.setProperty("--c_visibility", "hidden");
@@ -203,4 +206,68 @@ cross_button.addEventListener("click", () => {
   searchbox_appearance.style.setProperty("--s_visibility", "hidden");
   toggle_content.style.setProperty("--t_visibility", "hidden");
   cross_button.style.animation = "rotateCrossAfter";
+});
+
+/**
+ * toggle navigation for footer
+ */
+const button_as_title = document.querySelectorAll(".button-as-title_container");
+const full_block = document.querySelectorAll("section.full_block");
+const cross_button_footer = document.querySelectorAll(".cross_button");
+const back_button_wrapper = document.querySelectorAll(".back-button_wrapper");
+
+/**
+ * make all variable as array
+ */
+const button_as_title_array = Array.from(button_as_title);
+const full_block_array = Array.from(full_block);
+const cross_button_footer_array = Array.from(cross_button_footer);
+const back_button_wrapper_array = Array.from(back_button_wrapper);
+
+// reuseable function for footer navigtaion
+function toggleDisplayFooterNav(bt_display, fb_display, currentIndex) {
+  full_block_array[currentIndex].style.setProperty("--fb_display", fb_display);
+
+  button_as_title_array.forEach((item) => {
+    item.style.setProperty("--bt_display", bt_display);
+  });
+}
+
+button_as_title.forEach((item, index, arr) => {
+  item.addEventListener("click", (e) => {
+    let currentIndex = "";
+
+    if (arr[index] === e.target.closest(".button-as-title_container")) {
+      currentIndex = index;
+      toggleDisplayFooterNav("none", "block", currentIndex);
+    } else {
+      return;
+    }
+  });
+});
+
+cross_button_footer.forEach((item, index, arr) => {
+  item.addEventListener("click", (e) => {
+    let currentIndex = "";
+
+    if (arr[index] === e.target.closest(".cross_button")) {
+      currentIndex = index;
+      toggleDisplayFooterNav("block", "none", currentIndex);
+    } else {
+      return;
+    }
+  });
+});
+
+back_button_wrapper.forEach((item, index, arr) => {
+  item.addEventListener("click", (e) => {
+    let currentIndex = "";
+
+    if (arr[index] === e.target.closest(".back-button_wrapper")) {
+      currentIndex = index;
+      toggleDisplayFooterNav("block", "none", currentIndex);
+    } else {
+      return;
+    }
+  });
 });

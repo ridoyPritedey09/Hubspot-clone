@@ -111,6 +111,7 @@
   border-radius: 3px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .blog-post-one_third {
@@ -496,6 +497,7 @@ section.bv-box_wrapper {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .bsf-form_reset {
   display: flex;
   justify-content: space-between;
@@ -541,4 +543,28 @@ button.bsf_button.form_button {
   min-width: 30%;
   padding: 0.8rem;
   margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 765px) {
+  #bottom-subscribe_form {
+    display: none;
+  }
+
+  .mobile-view_none {
+    display: none;
+  }
+  a.bp_button:nth-of-type(1) {
+    margin-right: 0;
+  }
+
+  .bv-box_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bv-box_item {
+    width: 95%;
+  }
 }

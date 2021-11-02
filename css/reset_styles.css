@@ -12,20 +12,7 @@ html {
   margin: 0;
   box-sizing: inherit;
 }
-/* a:active,
-a:visited,
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-span {
-  color: var(--text-color);
-} */
+
 li {
   list-style: none;
 }
